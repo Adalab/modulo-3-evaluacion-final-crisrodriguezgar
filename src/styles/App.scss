@@ -11,22 +11,30 @@
   justify-content: center;
   text-align: center;
   padding-block: 2.5rem;
-  background-color: rgb(190, 228, 120);
+  background-color: rgba(212, 206, 121, 0.938);
   &__title {
     @include font($fontMonserrat, 3.5rem, white, bold);
   }
 }
-
+.main{
+    background-color: rgba(212, 206, 121, 0.76);
+}
+.form{
+    
+}
 .card {
   @include padding(0.7rem, 01rem);
-  background-color: rgba(212, 121, 121, 0.76);
+  background-color: rgba(212, 206, 121, 0.76);
   display: inline-block;
   text-align: center;
   border-radius: 1.5rem;
   margin-inline: 0.7rem;
   margin-block: 0.5rem;
   cursor: pointer;
-  
+  &:hover {
+    transform: scale(1.05);
+  }
+
   @media (min-width: 768px) {
     @include padding(1rem, 2rem);
     margin-inline: 1.5rem;
@@ -46,11 +54,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     width: 12rem;
-    @include padding (0.5rem, 0.5rem);
-    @include font ($fontMonserrat, 1.5rem, black, bold);
+    @include padding(0.5rem, 0.5rem);
+    @include font($fontMonserrat, 1.5rem, black, bold);
     @media (min-width: 768px) {
       width: 20rem;
-      
     }
   }
 
@@ -59,13 +66,20 @@
     overflow: hidden;
     text-overflow: ellipsis;
     width: 12rem;
-    @include font ($fontMonserrat, 1.2rem, black, 300);
+    @include font($fontMonserrat, 1.2rem, black, 300);
     @media (min-width: 768px) {
       width: 20rem;
     }
   }
-  &__year{
-    @include padding (0.5rem, 0.5rem);
-    @include font ($fontMonserrat, 1.2rem, black, 300);
+  &__year {
+    @include padding(0.5rem, 0.5rem);
+    @include font($fontMonserrat, 1.2rem, black, 300);
   }
+}
+.footer{
+    background-color: rgba(212, 206, 121, 0.938);
+    @include padding(2rem, 2rem);
+    @include font($fontMonserrat, 1.5rem, black, 300);
+    display: flex;
+    justify-content: space-between;
 }
