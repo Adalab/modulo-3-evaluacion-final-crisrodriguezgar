@@ -11,7 +11,7 @@ function App() {
 
   const [movieList, setMovieList] = useState(ls.get('movieList', []));
   const [movieFilter, setMovieFilter] = useState('');
-  const [yearFilter, setYearFilter] = useState('');
+  const [yearFilter, setYearFilter] = useState('Año');
 
   useEffect(() => {
     if (ls.get('movieList', null) === null) {
