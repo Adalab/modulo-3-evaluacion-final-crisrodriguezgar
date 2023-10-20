@@ -1,11 +1,12 @@
+import '../styles/App.scss';
 
-const MovieSceneItem = () => {
+const MovieSceneItem = ({movie}) => {
   return (
     <>
-      <li>Hola</li>
-      <li>Hola</li>
-      <li>Hola</li>
-      <li>Hola</li>
+      <img className="card__img" src={movie.image} alt={movie.movie}/>
+      <h4 className="card__title">{movie.movie}</h4>
+      <p className="card__subtitle">"{movie.prhase}"</p>
+      <p className="card__year">{movie.year}</p>
     </>
   );
 };

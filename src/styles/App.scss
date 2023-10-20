@@ -1,4 +1,4 @@
-//para cada componente 
+//para cada componente
 
 //importa cada layout
 //@import '../styles/nombre-de-fichero.scss';
@@ -6,12 +6,66 @@
 @import 'core/Mixins';
 @import 'core/Reset';
 
-.header{
-    display: flex;
-    justify-content: center;
-    padding-block: 2.5rem;
-    background-color: rgb(241, 119, 75);
-    &__title{
-        @include font ($fontMonserrat, 3.5rem, rgb(148, 202, 47), bold);
+.header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-block: 2.5rem;
+  background-color: rgb(190, 228, 120);
+  &__title {
+    @include font($fontMonserrat, 3.5rem, white, bold);
+  }
+}
+
+.card {
+  @include padding(0.7rem, 01rem);
+  background-color: rgba(212, 121, 121, 0.76);
+  display: inline-block;
+  text-align: center;
+  border-radius: 1.5rem;
+  margin-inline: 0.7rem;
+  margin-block: 0.5rem;
+  cursor: pointer;
+  
+  @media (min-width: 768px) {
+    @include padding(1rem, 2rem);
+    margin-inline: 1.5rem;
+    margin-block: 1.5rem;
+  }
+
+  &__img {
+    width: 13rem;
+    border-radius: 1.5rem;
+    @media (min-width: 768px) {
+      width: 20rem;
     }
+  }
+
+  &__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 12rem;
+    @include padding (0.5rem, 0.5rem);
+    @include font ($fontMonserrat, 1.5rem, black, bold);
+    @media (min-width: 768px) {
+      width: 20rem;
+      
+    }
+  }
+
+  &__subtitle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 12rem;
+    @include font ($fontMonserrat, 1.2rem, black, 300);
+    @media (min-width: 768px) {
+      width: 20rem;
+    }
+  }
+  &__year{
+    @include padding (0.5rem, 0.5rem);
+    @include font ($fontMonserrat, 1.2rem, black, 300);
+  }
 }
