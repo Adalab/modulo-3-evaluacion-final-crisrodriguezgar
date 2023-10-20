@@ -1,10 +1,19 @@
 const callToApi = () => {
   return fetch(
-    'https://beta.adalab.es/curso-intensivo-fullstack-recursos/apis/quotes-friends-tv-v1/quotes.json'
+    'https://owen-wilson-wow-api.onrender.com/wows/random?results=50'
   )
     .then((response) => response.json())
     .then((dataApi) => {
-      return dataApi;
+      const cleanData = dataApi.map((item, i) => {
+        return {
+          image: item.poster,
+          movie: item.movie,
+          prhase: item.full_line,
+          year: item.year,
+          id: i,
+        };
+      });
+      return cleanData;
     });
 };
 

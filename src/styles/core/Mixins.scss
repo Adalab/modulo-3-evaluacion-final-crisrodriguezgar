@@ -1,0 +1,23 @@
+@mixin font($family, $size, $color, $weight) {
+    font-family: $family;
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+  }
+  
+  @mixin size($width, $height) {
+    width: $width;
+    height: $height;
+  }
+  
+  @mixin dFlex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }
+  
+  @mixin padding ($inline, $block){
+    padding-inline: $inline;
+    padding-block: $block;
+  }

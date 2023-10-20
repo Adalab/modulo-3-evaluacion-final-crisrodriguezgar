@@ -1,23 +1,29 @@
 //imports dependencias, imagenes, componentes, stylos
 
-import reactLogo from '../images/react.svg';
+import MovieSceneList from './MovieSceneList';
 //import ls from '../services/localStorage';
-//import callToApi from '../services/api';
+import callToApi from '../services/api';
 import '../styles/App.scss';
-//import { useState, useEffect } from "react";
+import {useState, useEffect} from 'react';
 
 function App() {
   //funciones, variables, handles,
-  /*useEffect(() => {
-    callToApi().then((dataApi) => {
-      setLoquesea(dataApi);
-    });
-  }, []);*/
 
+  const [movieList, setMovieList] = useState([]);
+
+  useEffect(() => {
+    callToApi().then((cleanData) => {
+      setMovieList(cleanData);
+      console.log(cleanData);
+    });
+  }, []);
   //html
   return (
     <>
-      <img src={reactLogo} alt="" className="logo" />
+      <header className="header">
+        <h1 className="header__title">Owen Wilson's "wow"</h1>
+      </header>
+      <MovieSceneList />
     </>
   );
 }

@@ -2,3 +2,16 @@
 
 //importa cada layout
 //@import '../styles/nombre-de-fichero.scss';
+@import 'core/Variables';
+@import 'core/Mixins';
+@import 'core/Reset';
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding-block: 2.5rem;
+    background-color: rgb(241, 119, 75);
+    &__title{
+        @include font ($fontMonserrat, 3.5rem, rgb(148, 202, 47), bold);
+    }
+}
