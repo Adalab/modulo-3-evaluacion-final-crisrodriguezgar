@@ -11,19 +11,32 @@
   justify-content: center;
   text-align: center;
   padding-block: 2.5rem;
-  background-color: rgba(212, 206, 121, 0.938);
+  background-color: rgba(212, 206, 121, 0.76);
   &__title {
     @include font($fontMonserrat, 3.5rem, white, bold);
   }
 }
-.main{
-    background-color: rgba(212, 206, 121, 0.76);
+.main {
+  background-color: rgba(212, 206, 121, 0.76);
 }
-.form{
-    
+.form {
+  background-color: rgba(212, 206, 121, 0.938);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  @include padding(0.5rem, 1.5rem);
+  @include font($fontMonserrat, 1.2rem, black, 300);
+  &__input{
+    @include size (25rem, 3.5rem);
+    padding-left: 1rem;
+    margin-right: 5rem;
+  }
+  &__select{
+    @include padding(0.8rem, 0.8rem);
+  }
 }
 .card {
-  @include padding(0.7rem, 01rem);
+  @include padding(0.7rem, 1rem);
   background-color: rgba(212, 206, 121, 0.76);
   display: inline-block;
   text-align: center;
@@ -76,10 +89,10 @@
     @include font($fontMonserrat, 1.2rem, black, 300);
   }
 }
-.footer{
-    background-color: rgba(212, 206, 121, 0.938);
-    @include padding(2rem, 2rem);
-    @include font($fontMonserrat, 1.5rem, black, 300);
-    display: flex;
-    justify-content: space-between;
+.footer {
+  background-color: rgba(212, 206, 121, 0.938);
+  @include padding(2rem, 2rem);
+  @include font($fontMonserrat, 1.5rem, black, 300);
+  display: flex;
+  justify-content: space-between;
 }

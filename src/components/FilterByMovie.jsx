@@ -6,16 +6,16 @@ const FilterByMovie = ({movieFilter, handleChange}) => {
     console.log('estoy escribiendo en el input')
   };
   return (
-    <label htmlFor="">
-      Película
+    <>
       <input
         className="form__input"
         type="text"
         name="movie"
+        placeholder='Busca el título de una película...'
         value={movieFilter}
         onChange={handleInput}
       />
-    </label>
+    </>
   );
 };
 

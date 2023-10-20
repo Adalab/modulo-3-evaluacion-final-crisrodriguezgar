@@ -11,6 +11,7 @@ function App() {
 
   const [movieList, setMovieList] = useState(ls.get('movieList', []));
   const [movieFilter, setMovieFilter] = useState('');
+  const [yearFilter, setYearFilter] = useState('');
 
   useEffect(() => {
     if (ls.get('movieList', null) === null) {
@@ -22,14 +23,36 @@ function App() {
     }
   }, []);
 
+  //1. Funcion manejadora del input de texto
+
   const handleChange = (value) => {
     setMovieFilter(value);
     console.log(value);
   };
 
-  const filteredMovies = movieList.filter((item) =>
-    item.movie.toLowerCase().includes(movieFilter)
-  );
+  // 1.1. Filtro del input
+
+  const filteredMovies = movieList
+    .filter((item) => item.movie.toLowerCase().includes(movieFilter))
+    //2.2. concateno otro filter para el select
+    .filter((item) => {
+      if (yearFilter === 'Año') {
+        return true;
+      } else {
+        return yearFilter.includes(item.year);
+      }
+    });
+
+  //2. Funcion manejadora del Select, al igual que la funcion anterior tengo que coger el valor
+
+  const handleChangeYear = (value) => {
+    setYearFilter(value);
+  };
+
+  //3. Necesito buscar todos los años
+
+  const years = movieList.map((item) => item.year); 
+  console.log(years);
 
   //html
   return (
@@ -38,7 +61,13 @@ function App() {
         <h1 className="header__title">Owen Wilson's "Wow...!"</h1>
       </header>
       <main className="main">
-        <Filters movieFilter={movieFilter} handleChange={handleChange} />
+        <Filters
+          movieFilter={movieFilter}
+          handleChange={handleChange}
+          handleChangeYear={handleChangeYear}
+          yearFilter={yearFilter}
+          years={years}
+        />
         <MovieSceneList movieList={filteredMovies} />
       </main>
       <footer className="footer">
