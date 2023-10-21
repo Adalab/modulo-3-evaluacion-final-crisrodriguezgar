@@ -23,72 +23,75 @@
   background-color: rgba(212, 206, 121, 0.938);
   display: flex;
   justify-content: center;
-  text-align: center;
+  gap: 5rem;
   @include padding(0.5rem, 1.5rem);
   @include font($fontMonserrat, 1.2rem, black, 300);
   &__input{
     @include size (25rem, 3.5rem);
     padding-left: 1rem;
-    margin-right: 5rem;
   }
   &__select{
     @include padding(0.8rem, 0.8rem);
   }
 }
-.card {
-  @include padding(0.7rem, 1rem);
-  background-color: rgba(212, 206, 121, 0.76);
-  display: inline-block;
+
+.list{
   text-align: center;
-  border-radius: 1.5rem;
-  margin-inline: 0.7rem;
-  margin-block: 0.5rem;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  @media (min-width: 768px) {
-    @include padding(1rem, 2rem);
-    margin-inline: 1.5rem;
-    margin-block: 1.5rem;
-  }
-
-  &__img {
-    width: 13rem;
+  &__card {
+    @include padding(0.7rem, 1rem);
+    background-color: rgba(212, 206, 121, 0.76);
+    display: inline-block;
     border-radius: 1.5rem;
-    @media (min-width: 768px) {
-      width: 20rem;
+    margin-inline: 0.7rem;
+    margin-block: 1rem;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
     }
-  }
-
-  &__title {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 12rem;
-    @include padding(0.5rem, 0.5rem);
-    @include font($fontMonserrat, 1.5rem, black, bold);
+  
     @media (min-width: 768px) {
-      width: 20rem;
+      @include padding(1rem, 2rem);
+      margin-inline: 1.5rem;
+      margin-block: 1.5rem;
     }
-  }
-
-  &__subtitle {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 12rem;
-    @include font($fontMonserrat, 1.2rem, black, 300);
-    @media (min-width: 768px) {
-      width: 20rem;
+  
+    &__img {
+      width: 13rem;
+      border-radius: 1.5rem;
+      @media (min-width: 768px) {
+        width: 20rem;
+      }
     }
-  }
-  &__year {
-    @include padding(0.5rem, 0.5rem);
-    @include font($fontMonserrat, 1.2rem, black, 300);
+  
+    &__title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 12rem;
+      @include padding(0.5rem, 0.5rem);
+      @include font($fontMonserrat, 1.5rem, black, bold);
+      @media (min-width: 768px) {
+        width: 20rem;
+      }
+    }
+  
+    &__subtitle {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 12rem;
+      @include font($fontMonserrat, 1.2rem, black, 300);
+      @media (min-width: 768px) {
+        width: 20rem;
+      }
+    }
+    &__year {
+      @include padding(0.5rem, 0.5rem);
+      @include font($fontMonserrat, 1.2rem, black, 300);
+    }
   }
 }
+
 .footer {
   background-color: rgba(212, 206, 121, 0.938);
   @include padding(2rem, 2rem);

@@ -33,7 +33,7 @@ function App() {
   // 1.1. Filtro del input
 
   const filteredMovies = movieList
-    .filter((item) => item.movie.toLowerCase().includes(movieFilter))
+    .filter((item) => item.movie.toLowerCase().includes(movieFilter.toLowerCase()))
     //2.2. concateno otro filter para el select
     .filter((item) => {
       if (yearFilter === 'Año') {
