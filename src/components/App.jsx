@@ -33,7 +33,9 @@ function App() {
   // 1.1. Filtro del input
 
   const filteredMovies = movieList
-    .filter((item) => item.movie.toLowerCase().includes(movieFilter.toLowerCase()))
+    .filter((item) =>
+      item.movie.toLowerCase().includes(movieFilter.toLowerCase())
+    )
     //2.2. concateno otro filter para el select
     .filter((item) => {
       if (yearFilter === 'Año') {
@@ -51,8 +53,17 @@ function App() {
 
   //3. Necesito buscar todos los años
 
-  const years = movieList.map((item) => item.year); 
+  const years = movieList.map((item) => item.year);
   console.log(years);
+
+  //4.Ahora necesito limpiar los años y aparezca solo uno
+
+  const getYear = () => {
+    const years = movieList.map((item) => item.year);
+    const uniquesYears = new Set(years);
+    const uniquesArray = [...uniquesYears];
+    return uniquesArray;
+  };
 
   //html
   return (
@@ -66,7 +77,7 @@ function App() {
           handleChange={handleChange}
           handleChangeYear={handleChangeYear}
           yearFilter={yearFilter}
-          years={years}
+          years={getYear()}
         />
         <MovieSceneList movieList={filteredMovies} />
       </main>
