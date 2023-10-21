@@ -62,6 +62,7 @@ function App() {
     const years = movieList.map((item) => item.year);
     const uniquesYears = new Set(years);
     const uniquesArray = [...uniquesYears];
+    uniquesArray.sort(); // Ordenar los años
     return uniquesArray;
   };
 
