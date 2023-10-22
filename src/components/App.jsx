@@ -98,7 +98,10 @@ function App() {
                   yearFilter={yearFilter}
                   years={getYear()}
                 />
-                <MovieSceneList movieList={filteredMovies} />
+                <MovieSceneList
+                  movieList={filteredMovies}
+                  movieFilter={movieFilter}
+                />
               </>
             }
           />
