@@ -14,10 +14,18 @@
   padding-top: 3rem;
   background-color: #f4ec94;
   &__title {
-    @include font($fontMonserrat, 3.5rem, white, bold);
+    @include font($fontMonserrat, 2rem, white, bold);
+    width: 15rem;
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+      width: 30rem;
+    }
   }
   &__img{
-    width: 12rem;
+    width: 10rem;
+    @media (min-width: 768px) {
+      width: 15rem;
+    }
   }
 }
 .main {
@@ -46,7 +54,7 @@
 }
 
 .inputError {
-  @include font($fontMonserrat, 1.5rem, black, 300);
+  @include font($fontRoboto, 1.5rem, black, 300);
   display: flex;
   align-items: center;
   text-align: center;
@@ -95,7 +103,7 @@
       text-overflow: ellipsis;
       width: 12rem;
       @include padding(0.5rem, 0.5rem);
-      @include font($fontMonserrat, 1.5rem, black, bold);
+      @include font($fontRoboto, 1.5rem, black, bold);
       @media (min-width: 768px) {
         width: 20rem;
       }
@@ -150,9 +158,9 @@
       }
       &__title {
         @include padding(1rem, 1rem);
-        @include font($fontMonserrat, 2rem, black, bold);
+        @include font($fontRoboto, 2rem, black, bold);
         @media (min-width: 768px) {
-          @include font($fontMonserrat, 3.5rem, black, bold);
+          @include font($fontRoboto, 3.5rem, black, bold);
         }
       }
 
@@ -164,11 +172,11 @@
         }
       }
       &__director {
-        @include padding(0.5rem, 1rem);
+        @include padding(0.5rem, 2.5rem);
         @include font($fontMonserrat, 1.3rem, black, bold);
       }
       &__audio {
-        @include padding(0.5rem, 1rem);
+        //@include padding(0.5rem, 2rem);
         @include font($fontMonserrat, 1.3rem, black, bold);
       }
       &__icon {
@@ -187,7 +195,7 @@
 .footer {
   background-color: #eedb56;
   @include padding(2rem, 2rem);
-  @include font($fontMonserrat, 1.5rem, black, 300);
+  @include font($fontRoboto, 1.5rem, black, 300);
   display: flex;
   justify-content: space-between;
 }

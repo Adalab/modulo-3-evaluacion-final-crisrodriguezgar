@@ -109,7 +109,7 @@ function App() {
         </Routes>
       </main>
       <footer className="footer">
-        <p>© crisrodriguez</p>
+        <p>© crisrodriguezgar</p>
         <p>2023</p>
       </footer>
     </>
