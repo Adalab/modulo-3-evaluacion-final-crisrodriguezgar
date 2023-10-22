@@ -10,19 +10,23 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-block: 3rem;
-  background-color: rgba(212, 206, 121, 0.76);
+  align-items: center;
+  padding-top: 3rem;
+  background-color: #f4ec94;
   &__title {
     @include font($fontMonserrat, 3.5rem, white, bold);
   }
+  &__img{
+    width: 12rem;
+  }
 }
 .main {
-  background-color: rgba(212, 206, 121, 0.76);
+  background-color: #f4ec94;
   padding-bottom: 5rem;
   min-height: 100vh;
 }
 .form {
-  background-color: rgba(212, 206, 121, 0.938);
+  background-color: #eedb56;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -61,7 +65,7 @@
   text-align: center;
   &__card {
     @include padding(0.7rem, 1rem);
-    background-color: rgba(212, 206, 121, 0.76);
+    background-color: #eedb56;
     display: inline-block;
     border-radius: 1.5rem;
     margin-inline: 0.7rem;
@@ -120,7 +124,7 @@
   justify-content: center;
   &__card {
     @include padding(0.5rem, 1rem);
-    background-color: rgba(212, 206, 121, 0.76);
+    background-color: #eedb56;
     width: 24rem;
     border-radius: 1.5rem;
     display: inline-block;
@@ -173,7 +177,7 @@
       }
       &__exit {
         padding-top: 5rem;
-        color: rgb(182, 177, 106);
+        color: #ba8914;
         padding-bottom: 2rem;
       }
     }
@@ -181,7 +185,7 @@
 }
 
 .footer {
-  background-color: rgba(212, 206, 121, 0.938);
+  background-color: #eedb56;
   @include padding(2rem, 2rem);
   @include font($fontMonserrat, 1.5rem, black, 300);
   display: flex;

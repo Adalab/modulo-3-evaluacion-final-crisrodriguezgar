@@ -9,6 +9,7 @@ import '../styles/App.scss';
 import MovieSceneList from './MovieSceneList';
 import Filters from './Filters';
 import MovieDetail from './MovieDetail';
+import owen from '../images/favicon.png';
 
 function App() {
   //funciones, variables, handles,
@@ -57,7 +58,6 @@ function App() {
 
   //3. Necesito buscar todos los años
 
-  const years = movieList.map((item) => item.year);
   //console.log(years);
 
   //4.Ahora necesito limpiar los años y aparezca solo uno
@@ -84,6 +84,7 @@ function App() {
     <>
       <header className="header">
         <h1 className="header__title">Owen Wilson's "Wow...!"</h1>
+        <img className="header__img"src={owen} alt="" />
       </header>
       <main className="main">
         <Routes>
