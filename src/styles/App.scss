@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-block: 2.5rem;
+  padding-block: 3rem;
   background-color: rgba(212, 206, 121, 0.76);
   &__title {
     @include font($fontMonserrat, 3.5rem, white, bold);
@@ -116,7 +116,8 @@
 
 .details {
   text-align: center;
-
+  display: flex;
+  justify-content: center;
   &__card {
     @include padding(0.5rem, 1rem);
     background-color: rgba(212, 206, 121, 0.76);
@@ -134,6 +135,7 @@
       border-radius: 1.5rem;
       @media (min-width: 768px) {
         width: 25rem;
+        @include padding(0.5rem, 1rem);
       }
     }
     &__textbox {
