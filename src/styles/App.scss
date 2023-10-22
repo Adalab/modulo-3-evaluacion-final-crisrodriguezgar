@@ -41,6 +41,22 @@
   }
 }
 
+.inputError {
+  @include font($fontMonserrat, 1.5rem, black, 300);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  @include padding(2rem, 2rem);
+  &__img {
+    width: 30rem;
+    @include padding(2rem, 2rem);
+    @media (min-width: 768px) {
+      width: 50rem;
+    }
+  }
+}
+
 .list {
   text-align: center;
   &__card {
@@ -100,13 +116,14 @@
 
 .details {
   text-align: center;
+
   &__card {
     @include padding(0.5rem, 1rem);
     background-color: rgba(212, 206, 121, 0.76);
     width: 24rem;
     border-radius: 1.5rem;
     display: inline-block;
-    
+
     @media (min-width: 768px) {
       display: flex;
       align-items: center;
@@ -129,7 +146,6 @@
         @include padding(1rem, 1rem);
         @include font($fontMonserrat, 2rem, black, bold);
         @media (min-width: 768px) {
-    
           @include font($fontMonserrat, 3.5rem, black, bold);
         }
       }

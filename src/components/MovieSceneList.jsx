@@ -1,14 +1,16 @@
 import MovieSceneItem from './MovieSceneItem';
 import '../styles/App.scss';
 import {Link} from 'react-router-dom';
+import wow from '../images/wow.gif'
 
 const MovieSceneList = ({movieList, movieFilter}) => {
   if (movieList.length === 0) {
     return (
-      <section>
+      <section className='inputError'>
         <p>
           No hay coincidencias con la palabra "{movieFilter}" ¡Prueba otra vez!
         </p>
+        <img className='inputError__img'src={wow} alt="" />
       </section>
     );
   } else {
