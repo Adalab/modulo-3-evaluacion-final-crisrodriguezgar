@@ -22,7 +22,7 @@ function App() {
     if (ls.get('movieList', null) === null) {
       callToApi().then((cleanData) => {
         setMovieList(cleanData);
-        console.log(cleanData);
+        //console.log(cleanData);
         ls.set('movieList', cleanData);
       });
     }
@@ -32,7 +32,7 @@ function App() {
 
   const handleChange = (value) => {
     setMovieFilter(value);
-    console.log(value);
+    //console.log(value);
   };
 
   // 1.1. Filtro del input
@@ -56,11 +56,7 @@ function App() {
     setYearFilter(value);
   };
 
-  //3. Necesito buscar todos los años
-
-  //console.log(years);
-
-  //4.Ahora necesito limpiar los años y aparezca solo uno
+  //3. necesito limpiar los años y aparezca solo uno
 
   const getYear = () => {
     const years = movieList.map((item) => item.year);
@@ -70,12 +66,12 @@ function App() {
     return uniquesArray;
   };
 
-  //5. Buscar al usuario basado en el id de la película
+  //4. Buscar al usuario basado en el id de la película
   const {pathname} = useLocation();
   const routeData = matchPath('/movie/:id', pathname);
-  console.log(routeData);
+  //console.log(routeData);
   const movieId = routeData !== null ? routeData.params.id : '';
-  console.log(movieId);
+  //console.log(movieId);
 
   const movieData = movieList.find((item) => item.id === parseInt(movieId));
 
@@ -84,7 +80,7 @@ function App() {
     <>
       <header className="header">
         <h1 className="header__title">Owen Wilson's "Wow...!"</h1>
-        <img className="header__img"src={owen} alt="" />
+        <img className="header__img" src={owen} alt="" />
       </header>
       <main className="main">
         <Routes>

@@ -1,7 +1,13 @@
 import FilterByMovie from './FilterByMovie';
 import FilterByYear from './FilterByYear';
 
-const Filters = ({movieFilter, handleChange, yearFilter, handleChangeYear, years}) => {
+const Filters = ({
+  movieFilter,
+  handleChange,
+  yearFilter,
+  handleChangeYear,
+  years,
+}) => {
   const handleSubmit = (ev) => {
     ev.preventDefault();
   };
@@ -9,7 +15,11 @@ const Filters = ({movieFilter, handleChange, yearFilter, handleChangeYear, years
   return (
     <form className="form" onSubmit={handleSubmit}>
       <FilterByMovie movieFilter={movieFilter} handleChange={handleChange} />
-      <FilterByYear yearFilter={yearFilter}  handleChangeYear={handleChangeYear} years={years}/>
+      <FilterByYear
+        yearFilter={yearFilter}
+        handleChangeYear={handleChangeYear}
+        years={years}
+      />
     </form>
   );
 };

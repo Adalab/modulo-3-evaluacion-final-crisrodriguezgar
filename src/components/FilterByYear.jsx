@@ -13,15 +13,13 @@ const FilterByYear = ({yearFilter, handleChangeYear, years}) => {
   return (
     <label htmlFor="">
       <select
-      className='form__select'
-      name="year" 
-      id="year" 
-      value={yearFilter} 
-      onChange={handleSelect}>
-        <option 
-        value="Año">
-          Año
-        </option>
+        className="form__select"
+        name="year"
+        id="year"
+        value={yearFilter}
+        onChange={handleSelect}
+      >
+        <option value="Año">Año</option>
         {renderYears()}
       </select>
     </label>
