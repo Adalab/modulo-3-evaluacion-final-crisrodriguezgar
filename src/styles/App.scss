@@ -19,6 +19,7 @@
 .main {
   background-color: rgba(212, 206, 121, 0.76);
   padding-bottom: 5rem;
+  min-height: 100vh;
 }
 .form {
   background-color: rgba(212, 206, 121, 0.938);
@@ -103,27 +104,33 @@
     @include padding(0.5rem, 1rem);
     background-color: rgba(212, 206, 121, 0.76);
     width: 24rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     border-radius: 1.5rem;
     display: inline-block;
-    align-content: center;
+    
+    @media (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      width: 70rem;
+    }
     &__img {
       width: 20rem;
       border-radius: 1.5rem;
       @media (min-width: 768px) {
-        width: 20rem;
+        width: 25rem;
       }
     }
     &__textbox {
       @include padding(2rem, 2rem);
+      flex-direction: column;
+      @media (min-width: 768px) {
+        @include padding(3rem, 2rem);
+      }
       &__title {
         @include padding(1rem, 1rem);
         @include font($fontMonserrat, 2rem, black, bold);
         @media (min-width: 768px) {
-          width: 20rem;
+    
+          @include font($fontMonserrat, 3.5rem, black, bold);
         }
       }
 
@@ -131,7 +138,7 @@
         @include padding(0.5rem, 0.5rem);
         @include font($fontMonserrat, 1.2rem, black, 300);
         @media (min-width: 768px) {
-          width: 20rem;
+          @include font($fontMonserrat, 2rem, black, 300);
         }
       }
       &__director {
@@ -139,6 +146,7 @@
         @include font($fontMonserrat, 1.3rem, black, bold);
       }
       &__audio {
+        @include padding(0.5rem, 1rem);
         @include font($fontMonserrat, 1.3rem, black, bold);
       }
       &__icon {
@@ -146,6 +154,7 @@
         font-size: 2rem;
       }
       &__exit {
+        padding-top: 5rem;
         color: rgb(182, 177, 106);
         padding-bottom: 2rem;
       }
