@@ -6,11 +6,13 @@ const callToApi = () => {
     .then((dataApi) => {
       const cleanData = dataApi.map((item, i) => {
         return {
+          id: i,
           image: item.poster,
           movie: item.movie,
-          prhase: item.full_line,
+          quote: item.full_line,
+          director: item.director,
           year: item.year,
-          id: i,
+          audio: item.audio,
         };
       });
       return cleanData;

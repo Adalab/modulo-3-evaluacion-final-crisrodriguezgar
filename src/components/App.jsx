@@ -1,10 +1,14 @@
 //imports dependencias, imagenes, componentes, stylos
+import {useState, useEffect} from 'react';
+import {Route, Routes} from 'react-router-dom';
+import {useLocation, matchPath} from 'react-router';
+
 import ls from '../services/localStorage';
 import callToApi from '../services/api';
 import '../styles/App.scss';
-import {useState, useEffect} from 'react';
 import MovieSceneList from './MovieSceneList';
 import Filters from './Filters';
+import MovieDetail from './MovieDetail';
 
 function App() {
   //funciones, variables, handles,
@@ -54,7 +58,7 @@ function App() {
   //3. Necesito buscar todos los años
 
   const years = movieList.map((item) => item.year);
-  console.log(years);
+  //console.log(years);
 
   //4.Ahora necesito limpiar los años y aparezca solo uno
 
@@ -66,6 +70,15 @@ function App() {
     return uniquesArray;
   };
 
+  //5. Buscar al usuario basado en el id de la película
+  const {pathname} = useLocation();
+  const routeData = matchPath('/movie/:id', pathname);
+  console.log(routeData);
+  const movieId = routeData !== null ? routeData.params.id : '';
+  console.log(movieId);
+
+  const movieData = movieList.find((item) => item.id === parseInt(movieId));
+
   //html
   return (
     <>
@@ -73,14 +86,27 @@ function App() {
         <h1 className="header__title">Owen Wilson's "Wow...!"</h1>
       </header>
       <main className="main">
-        <Filters
-          movieFilter={movieFilter}
-          handleChange={handleChange}
-          handleChangeYear={handleChangeYear}
-          yearFilter={yearFilter}
-          years={getYear()}
-        />
-        <MovieSceneList movieList={filteredMovies} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Filters
+                  movieFilter={movieFilter}
+                  handleChange={handleChange}
+                  handleChangeYear={handleChangeYear}
+                  yearFilter={yearFilter}
+                  years={getYear()}
+                />
+                <MovieSceneList movieList={filteredMovies} />
+              </>
+            }
+          />
+          <Route
+            path="/movie/:id" //los : es para decirle que id es un parametro
+            element={<MovieDetail movieData={movieData} />}
+          />
+        </Routes>
       </main>
       <footer className="footer">
         <p>© crisrodriguez</p>
