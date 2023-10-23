@@ -50,10 +50,12 @@
   }
   &__select {
     @include padding(0.8rem, 0.8rem);
+    cursor: pointer;
   }
   &__btn {
-    @include padding(0.8rem, 1.6rem);
+    @include padding(0rem, 1.6rem);
     color: #ba8914;
+    cursor: pointer;
   }
 }
 
@@ -83,8 +85,10 @@
     margin-inline: 0.7rem;
     margin-block: 1rem;
     cursor: pointer;
+    transition-duration: 0.8s;
     &:hover {
       transform: scale(1.05);
+      box-shadow: 0 1px 10px 0 grey, 0 1px 3px 0 rgba(0, 0, 0, 0.35);
     }
 
     @media (min-width: 768px) {
@@ -181,7 +185,6 @@
         @include font($fontMonserrat, 1.3rem, black, bold);
       }
       &__audio {
-        //@include padding(0.5rem, 2rem);
         @include font($fontMonserrat, 1.3rem, black, bold);
       }
       &__icon {

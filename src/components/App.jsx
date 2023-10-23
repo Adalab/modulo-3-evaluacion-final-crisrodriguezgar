@@ -16,7 +16,7 @@ function App() {
 
   const [movieList, setMovieList] = useState(ls.get('movieListLS', []));
   const [movieFilter, setMovieFilter] = useState(ls.get('movieFilterLS', ''));
-  const [yearFilter, setYearFilter] = useState('Año');
+  const [yearFilter, setYearFilter] = useState(ls.get('yearFilterLS', 'Año'));
 
   useEffect(() => {
     if (ls.get('movieList', null) === null) {
@@ -36,8 +36,11 @@ function App() {
     ls.set('movieFilterLS', movieFilter);
   }, [movieFilter]);
 
+  useEffect(() => {
+    ls.set('yearFilterLS', yearFilter);
+  }, [yearFilter]);
 
-  const handleResetButton = (value) => {
+  const handleResetButton = () => {
     setMovieFilter('');
     setYearFilter('Año');
   };
@@ -64,7 +67,7 @@ function App() {
       }
     });
 
-  //2. Funcion manejadora del Select, al igual que la funcion anterior tengo que coger el valor
+  //2. Funcion manejadora del Select, al igual que la funcion del input tengo que coger el valor
 
   const handleChangeYear = (value) => {
     setYearFilter(value);
