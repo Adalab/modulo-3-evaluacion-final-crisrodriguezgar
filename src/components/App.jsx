@@ -14,8 +14,8 @@ import owen from '../images/favicon.png';
 function App() {
   //funciones, variables, handles,
 
-  const [movieList, setMovieList] = useState(ls.get('movieList', []));
-  const [movieFilter, setMovieFilter] = useState('');
+  const [movieList, setMovieList] = useState(ls.get('movieListLS', []));
+  const [movieFilter, setMovieFilter] = useState(ls.get('movieFilterLS', ''));
   const [yearFilter, setYearFilter] = useState('Año');
 
   useEffect(() => {
@@ -27,6 +27,20 @@ function App() {
       });
     }
   }, []);
+
+  useEffect(() => {
+    ls.set('movieListLS', movieList);
+  }, [movieList]);
+
+  useEffect(() => {
+    ls.set('movieFilterLS', movieFilter);
+  }, [movieFilter]);
+
+
+  const handleResetButton = (value) => {
+    setMovieFilter('');
+    setYearFilter('Año');
+  };
 
   //1. Funcion manejadora del input de texto
 
@@ -94,6 +108,7 @@ function App() {
                   handleChangeYear={handleChangeYear}
                   yearFilter={yearFilter}
                   years={getYear()}
+                  handleResetButton={handleResetButton}
                 />
                 <MovieSceneList
                   movieList={filteredMovies}

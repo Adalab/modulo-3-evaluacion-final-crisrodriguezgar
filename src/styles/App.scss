@@ -21,7 +21,7 @@
       width: 30rem;
     }
   }
-  &__img{
+  &__img {
     width: 10rem;
     @media (min-width: 768px) {
       width: 15rem;
@@ -50,6 +50,10 @@
   }
   &__select {
     @include padding(0.8rem, 0.8rem);
+  }
+  &__btn {
+    @include padding(0.8rem, 1.6rem);
+    color: #ba8914;
   }
 }
 
@@ -131,6 +135,7 @@
   display: flex;
   justify-content: center;
   &__card {
+    justify-content: space-around;
     @include padding(0.5rem, 1rem);
     background-color: #eedb56;
     width: 24rem;
