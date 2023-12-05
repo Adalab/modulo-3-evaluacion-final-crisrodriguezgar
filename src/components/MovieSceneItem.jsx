@@ -9,7 +9,7 @@ const MovieSceneItem = ({movie}) => {
         alt={`cartel ${movie.movie}`}
       />
       <h4 className="list__card__title">{movie.movie}</h4>
-      <p className="list__card__subtitle">"{movie.quote}"</p>
+      <p className="list__card__subtitle">&quot;{movie.quote}&quot;</p>
       <p className="list__card__year">{movie.year}</p>
     </>
   );
