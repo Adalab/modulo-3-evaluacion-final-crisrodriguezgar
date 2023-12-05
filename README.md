@@ -1,10 +1,9 @@
 
-# Evaluación módulo 3. Buscador de películas de Owen Wilson
+#React website: Owen Wilson movies.
 
-### ¡Hola soy Cristina! y esta es mi evaluación del módulo 3 en el bootcamp de Adalab.
+### Search website where he says "wow..!"
 
-El ejercicio consiste en desarrollar una página web con el listado de las escenas de las películas donde el
-actor Owen Wilson ha dicho "Woow...", debe ser realizado con **React**, el cual nos debe permitir:
+I can now create some awesome interactive web apps using React✨. This is my new React website where you can search and read some information where Owen Wilson says "Wow..!" Wilson has used the word “wow” in 27 movies, about 81 times. And he's appeared in 52 movies, so statistically, he says "wow" in 51.9% of them.
 
 - Recoger los datos de películas de la api **"The Owen Wilson Wow Api"**
 - Nada más abrir la página debe volcar los datos de la api, en un listado de 50 escenas donde el actor haya dicho "wow"
@@ -41,4 +40,4 @@ El ejercicio también tiene una parte de maquetación con HTML y Sass libre, per
 
 ¡Espero que la disfrutéis!
 
-![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
+![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)](url)
