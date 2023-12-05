@@ -5,7 +5,7 @@
 
 I can now create some awesome interactive web apps using React✨. This is my new React website where you can search and read some information where Owen Wilson says "Wow..!" Wilson has used the word “wow” in 27 movies, about 81 times. And he's appeared in 52 movies, so statistically, he says "wow" in 51.9% of them.
 
-<img src="./src/images/owen-wilson.PNG" width="400"/><img src="./src/images/detail-owen.PNG" width="400"/>
+<img src="./src/images/owen-wilson.PNG" width="445"/> <img src="./src/images/detail-owen.PNG" width="320"/>
 
 ## 📋 Initial Requeriments
 
