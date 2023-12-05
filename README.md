@@ -5,7 +5,7 @@
 
 I can now create some awesome interactive web apps using React✨. This is my new React website where you can search and read some information where Owen Wilson says "Wow..!" Wilson has used the word “wow” in 27 movies, about 81 times. And he's appeared in 52 movies, so statistically, he says "wow" in 51.9% of them.
 
-<img src="./src/images/owen-wilson.PNG" width="400"/><img src="./src/images/detail-owen.PNG" width="400"/>
+<img className="readme" src="./src/images/owen-wilson.PNG" width="400"/><img src="./src/images/detail-owen.PNG" width="400"/>
 
 ## 📋 Initial Requeriments
 
@@ -53,5 +53,5 @@ I'm an student and as I stated before am learning a whole lot of Front End Devel
 
 [![Autor](https://img.shields.io/badge/-%20Cristina%20Rodriguez%20-%20pink?logo=github&labelColor=grey&color=rgb(240%2C%2093%2C%20215))](https://github.com/crisrodriguezgar)
 
-¡Espero que la disfrutéis!
+Enjoy it!
 
