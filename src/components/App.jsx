@@ -127,8 +127,18 @@ function App() {
         </Routes>
       </main>
       <footer className="footer">
-        <p>© crisrodriguezgar</p>
-        <p>2023</p>
+        <small className="footer__copy">© crisrodriguezgar 2023</small>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/cristinarodriguezgar"
+            target="_blank"
+          >
+            <i className="fa-brands fa-linkedin footer__linkedin"></i>
+          </a>
+          <a href="https://github.com/crisrodriguezgar" target="_blank">
+            <i className="fa-brands fa-github-alt footer__git"></i>
+          </a>
+        </div>
       </footer>
     </>
   );

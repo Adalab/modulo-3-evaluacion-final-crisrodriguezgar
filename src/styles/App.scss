@@ -202,8 +202,18 @@
 
 .footer {
   background-color: #eedb56;
-  @include padding(2rem, 2rem);
-  @include font($fontRoboto, 1.5rem, black, 300);
+  @include padding(2.5rem, 2.5rem);
+  @include font($fontRoboto, 1.7rem, #ba8914, 300);
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
+  align-items: center;
+  &__linkedin{
+    font-size: 2rem;
+    padding-inline: 1.5rem;
+    color: #ba8914;
+  }
+  &__git{
+    font-size: 2rem;
+    color: #ba8914;
+  }
 }

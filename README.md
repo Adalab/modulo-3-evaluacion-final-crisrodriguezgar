@@ -1,22 +1,32 @@
 
 #React website: Owen Wilson movies.
 
-### Search website where he says "wow..!"
+## Search website where he says "wow..!"
 
 I can now create some awesome interactive web apps using React✨. This is my new React website where you can search and read some information where Owen Wilson says "Wow..!" Wilson has used the word “wow” in 27 movies, about 81 times. And he's appeared in 52 movies, so statistically, he says "wow" in 51.9% of them.
 
-- Recoger los datos de películas de la api **"The Owen Wilson Wow Api"**
-- Nada más abrir la página debe volcar los datos de la api, en un listado de 50 escenas donde el actor haya dicho "wow"
-- Filtrar el listado por el título de la película
-- Filtrar el listado por año de estreno
-- Guardar los resultados de búsqueda en el **Local storage**, para que no las pierdas nunca
-- Al hacer click sobre la tarjeta de una escena, su información aparece a pantalla completa. Y muestra esta información: (nombre de la película, frase completa, director, el enlace del audio de la escena)
-- Si busca por un texto por ejemplo "ZZZ" y no hay ninguna escena de película que coincida con
-dicho texto muestra este mensaje: "No hay coincidencias con la palabra "ZZZ". ¡Prueba otra vez!" con un gif muy gracioso ¡compruébalo!
+<img src="./src/images/owen-wilson.PNG" width="400"/><img src="./src/images/detail-owen.PNG" width="400"/>
 
-El ejercicio también tiene una parte de maquetación con HTML y Sass libre, pero es recomendable dedicar esfuerzo a la maquetación una vez terminadas las funcionalidades de la misma, ya que los criterios de evaluación están relacionados con esta última.
+## 📋 Initial Requeriments
 
-### Componentes
+- Create a react app
+- The app must fetch from **"The Owen Wilson Wow Api"**
+- Render the movies where Owen has said "wow". Required information is: Picture, name and year.
+- Adds two filters that allow the user to search by movie title and year.
+
+## 🌟 Quality Requirements
+
+- Semantic must be right.
+- When the user filters if it press the enter key nothing must happen.
+- If the user searches for a non-existent movie it should display a message like this: "There are no matches for the word "ZZZ". Try again!" I added a very funny gif, check it out!
+- The filter must work either if the user writes with caps on or not.
+- When in the character detail if the user wants to go back to the home page the search input value must remain.
+
+## My own extra features 👩‍🎤
+
+- Add a reset button that resets the filters values
+  
+### Components
 
 - App
 - Filters
@@ -27,12 +37,17 @@ El ejercicio también tiene una parte de maquetación con HTML y Sass libre, per
 - MovieDetail
 
 
-### Tecnologías utilizadas
+## 🔨 Built with 
+
 - **Visual Studio Code**
 - **HTML**
 - **SASS** 
 - **React**
-- **Started kit React**
+
+## ✏️ Do you have any idea? 
+
+I'm an student and as I stated before am learning a whole lot of Front End Developing, so, if  you have any idea that I could develope please tell me so and I will try to.
+
 
 ### Autor
 
@@ -40,4 +55,3 @@ El ejercicio también tiene una parte de maquetación con HTML y Sass libre, per
 
 ¡Espero que la disfrutéis!
 
-![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)](url)
