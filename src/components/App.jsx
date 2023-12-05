@@ -96,7 +96,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <h1 className="header__title">Owen Wilson's "Wow...!"</h1>
+        <h1 className="header__title">Owen Wilson&apos;s &quot;Wow...!&quot;</h1>
         <img className="header__img" src={owen} alt="" />
       </header>
       <main className="main">
