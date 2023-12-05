@@ -17,7 +17,7 @@ const Filters = ({
   };
 
   return (
-    <form classNameName="form" onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <FilterByMovie movieFilter={movieFilter} handleChange={handleChange} />
       <FilterByYear
         yearFilter={yearFilter}
