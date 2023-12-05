@@ -26,6 +26,13 @@ I can now create some awesome interactive web apps using React✨. This is my ne
 
 - Add a reset button that resets the filters values
   
+## 🔨 Built with 
+
+- **Visual Studio Code**
+- **HTML**
+- **SASS** 
+- **React**
+  
 ### Components
 
 - App
@@ -35,19 +42,10 @@ I can now create some awesome interactive web apps using React✨. This is my ne
 - MovieSceneList
   - MovieSeceneItem
 - MovieDetail
-
-
-## 🔨 Built with 
-
-- **Visual Studio Code**
-- **HTML**
-- **SASS** 
-- **React**
-
+  
 ## ✏️ Do you have any idea? 
 
 I'm an student and as I stated before am learning a whole lot of Front End Developing, so, if  you have any idea that I could develope please tell me so and I will try to.
-
 
 ### 🙍‍♀️ Autor
 
