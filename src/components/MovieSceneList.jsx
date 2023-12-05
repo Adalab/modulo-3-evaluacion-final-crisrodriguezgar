@@ -8,8 +8,7 @@ const MovieSceneList = ({movieList, movieFilter}) => {
     return (
       <section className="inputError">
         <p>
-          No hay coincidencias con la palabra "{movieFilter}" y el año. ¡Prueba
-          otra vez!
+          No hay coincidencias con la palabra &quot;{movieFilter}&quot; y el año. ¡Prueba otra vez!
         </p>
         <img className="inputError__img" src={wow} alt="" />
       </section>
