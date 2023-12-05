@@ -51,5 +51,7 @@ I'm an student and as I stated before am learning a whole lot of Front End Devel
 
 [![Autor](https://img.shields.io/badge/-%20Cristina%20Rodriguez%20-%20pink?logo=github&labelColor=grey&color=rgb(240%2C%2093%2C%20215))](https://github.com/crisrodriguezgar)
 
+[![CodeFactor](https://www.codefactor.io/repository/github/crisrodriguezgar/owen-wilson/badge)](https://www.codefactor.io/repository/github/crisrodriguezgar/owen-wilson)
+
 Enjoy it!
 
